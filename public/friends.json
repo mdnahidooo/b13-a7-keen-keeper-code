@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Rahim Uddin",
+    "picture": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
+    "email": "rahim.uddin@example.com",
+    "days_since_contact": 20,
+    "status": "overdue",
+    "tags": ["school friend", "childhood", "close friend"],
+    "bio": "Grew up in Dhaka and went to the same school for 10 years. We used to play football every afternoon in the neighborhood field.",
+    "goal": 14,
+    "next_due_date": "2026-03-25"
+  },
+  {
+    "id": 2,
+    "name": "Ayesha Khan",
+    "picture": "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+    "email": "ayesha.khan@example.com",
+    "days_since_contact": 5,
+    "status": "on-track",
+    "tags": ["university", "study buddy", "close friend"],
+    "bio": "Met during university group projects. We often studied together before exams and still share notes and career advice.",
+    "goal": 10,
+    "next_due_date": "2026-04-20"
+  },
+  {
+    "id": 3,
+    "name": "Tanvir Hossain",
+    "picture": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+    "email": "tanvir.hossain@example.com",
+    "days_since_contact": 12,
+    "status": "almost due",
+    "tags": ["college", "gaming", "friend"],
+    "bio": "Met in college hostel. We bonded over late-night gaming sessions and tech discussions about programming and startups.",
+    "goal": 14,
+    "next_due_date": "2026-04-16"
+  },
+  {
+    "id": 4,
+    "name": "Mehedi Hasan",
+    "picture": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7",
+    "email": "mehedi.hasan@example.com",
+    "days_since_contact": 30,
+    "status": "overdue",
+    "tags": ["work", "colleague", "professional"],
+    "bio": "Former office colleague from a software company. We worked together on multiple frontend projects and still occasionally collaborate.",
+    "goal": 21,
+    "next_due_date": "2026-03-10"
+  },
+  {
+    "id": 5,
+    "name": "Nusrat Jahan",
+    "picture": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80",
+    "email": "nusrat.jahan@example.com",
+    "days_since_contact": 2,
+    "status": "on-track",
+    "tags": ["cousin", "family", "close friend"],
+    "bio": "My cousin who lives nearby. We often meet during family gatherings and share personal updates regularly.",
+    "goal": 7,
+    "next_due_date": "2026-04-18"
+  },
+  {
+    "id": 6,
+    "name": "Sohan Ahmed",
+    "picture": "https://images.unsplash.com/photo-1527980965255-d3b416303d12",
+    "email": "sohan.ahmed@example.com",
+    "days_since_contact": 15,
+    "status": "overdue",
+    "tags": ["school", "childhood", "best friend"],
+    "bio": "Best friend from school days. We used to sit on the same bench and still try to meet whenever possible.",
+    "goal": 14,
+    "next_due_date": "2026-04-01"
+  },
+  {
+    "id": 7,
+    "name": "Imran Rahman",
+    "picture": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d",
+    "email": "imran.rahman@example.com",
+    "days_since_contact": 9,
+    "status": "on-track",
+    "tags": ["tech friend", "developer", "networking"],
+    "bio": "Met through a developer community. We discuss web development, Next.js, and share coding resources regularly.",
+    "goal": 14,
+    "next_due_date": "2026-04-22"
+  },
+  {
+    "id": 8,
+    "name": "Farhana Islam",
+    "picture": "https://images.unsplash.com/photo-1544005313-94ddf0286df2",
+    "email": "farhana.islam@example.com",
+    "days_since_contact": 13,
+    "status": "almost due",
+    "tags": ["university", "friend", "project partner"],
+    "bio": "University project partner. We worked together on multiple assignments and still keep in touch for career advice.",
+    "goal": 14,
+    "next_due_date": "2026-04-15"
+  }
+]
