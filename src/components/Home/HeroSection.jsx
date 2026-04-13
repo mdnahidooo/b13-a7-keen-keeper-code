@@ -1,4 +1,5 @@
 import React from 'react';
+import { IoMdAdd } from 'react-icons/io';
 
 
 const HeroSection = async () => {
@@ -13,11 +14,12 @@ const HeroSection = async () => {
                         Friends to keep close in your life
                     </h2>
 
-                    <p className="text-gray-600">
+                    <p className="text-[#64748B]">
                         Your personal shelf of meaningful connections. Browse, tend and nurture the <br /> relationships that matter most.
                     </p>
 
-                    <button className="px-5 py-2 bg-[#244D3F] text-white rounded-md hover:opacity-90 transition mt-2">
+                    <button className="px-5 py-2 bg-[#244D3F] text-white rounded-md hover:opacity-90 transition mt-6 flex items-center gap-2 mx-auto">
+                        <IoMdAdd />
                         Add a Friend
                     </button>
                 </div>

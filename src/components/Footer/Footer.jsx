@@ -54,7 +54,7 @@ const Footer = () => {
 
                 <div className="w-11/12 md:w-10/12 mx-auto border-t border-gray-600 mt-5">
 
-                    <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-170 py-5 text-sm text-gray-400">
+                    <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-169 py-5 text-sm text-gray-400">
 
                         {/* LEFT */}
                         <p className="text-center md:text-left leading-relaxed">
