@@ -1,33 +1,34 @@
+import HeroSection from '@/components/Home/HeroSection';
 import DashboardCards from '@/components/Home/DashboardCards';
-import Friends from '@/components/Home/Friends';
 import React from 'react';
+import FriendCard from '@/components/Home/FriendCard';
+import Link from 'next/link';
 
-const HomePage = () => {
+const HomePage = async () => {
+
+    const res = await fetch("http://localhost:3000/friends.json");
+    const friends = await res.json();
+    // console.log(friends);
+
     return (
         <div>
             <div className="w-10/12 mx-auto">
 
                 {/* HERO */}
-                <div className="flex flex-col items-center text-center justify-center mt-20">
-                    <div className="space-y-4">
-                        <h2 className="text-5xl font-extrabold text-gray-800">
-                            Friends to keep close in your life
-                        </h2>
-
-                        <p className="text-gray-600">
-                            Your personal shelf of meaningful connections. Browse, tend and nurture the relationships that matter most.
-                        </p>
-
-                        <button className="px-5 py-2 bg-[#244D3F] text-white rounded-md hover:opacity-90 transition mt-2">
-                            Add a Friend
-                        </button>
-                    </div>
-                </div>
+                <HeroSection></HeroSection>
 
                 {/* DASHBOARD */}
                 <DashboardCards />
 
-                <Friends></Friends>
+                <div className='mb-20'>
+                    <h2 className='text-2xl font-bold'>Your Friends</h2>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {
+                            friends.map((friend) => <Link key={friend.id} href={`/home/${friend.id}`}><FriendCard  friend={friend}></FriendCard></Link>)
+                        }
+                    </div>
+                </div>
 
             </div>
         </div>
