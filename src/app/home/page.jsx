@@ -11,7 +11,7 @@ const HomePage = async () => {
     // console.log(friends);
 
     return (
-        <div>
+        <div className='bg-gray-50'>
             <div className="w-10/12 mx-auto">
 
                 {/* HERO */}
@@ -21,7 +21,7 @@ const HomePage = async () => {
                 <DashboardCards />
 
                 <div className='mb-20'>
-                    <h2 className='text-2xl font-bold'>Your Friends</h2>
+                    <h2 className='text-2xl font-bold mb-4'>Your Friends</h2>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {
