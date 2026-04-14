@@ -5,7 +5,7 @@ import FriendCard from '@/components/Home/FriendCard';
 import Link from 'next/link';
 
 export const metadata = {
-    title: "KeenKeeper | Home",
+    title: "KeenKeeper",
     description: "Manage and nurture your meaningful relationships easily with KeenKeeper.",
 };
 
