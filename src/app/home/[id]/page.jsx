@@ -8,7 +8,7 @@ import { RiDeleteBinLine, RiNotificationSnoozeLine } from 'react-icons/ri';
 
 
 export async function generateMetadata({ params }) {
-    const res = await fetch("http://localhost:3000/friends.json");
+    const res = await fetch("https://b13-a7-keen-keeper-code.vercel.app/friends.json");
     const friends = await res.json();
     // console.log(friends, 'from friend details card');
 
@@ -32,7 +32,7 @@ export async function generateMetadata({ params }) {
 
 const FriendDetailPage = async ({ params }) => {
 
-    const res = await fetch("http://localhost:3000/friends.json");
+    const res = await fetch("https://b13-a7-keen-keeper-code.vercel.app/friends.json");
     const friends = await res.json();
     // console.log(friends, 'from friend details card');
 

@@ -88,5 +88,5 @@ The goal of **KeenKeeper** is to encourage users to maintain strong relationship
 
 ## 📬 Submission
 
-- 🌐 **Live Link:** https://your-live-link-here.com  
-- 💻 **GitHub Repository:** https://github.com/your-username/keenkeeper  
+- 🌐 **Live Link:** https://b13-a7-keen-keeper-code.vercel.app/ 
+- 💻 **GitHub Repository:** https://github.com/mdnahidooo/b13-a7-keen-keeper-code  
