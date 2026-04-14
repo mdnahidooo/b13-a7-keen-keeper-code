@@ -12,7 +12,7 @@ const Navbar = () => {
     // console.log(pathName, 'path name from navbar');
 
     const navLinks = <>
-        <li><Link href='/home' className={`font-semibold text-[#64748B] mr-1 ${pathName === '/home' ? 'text-white bg-[#244D3F] ' : ''} `}><RiHome2Line />
+        <li><Link href='/' className={`font-semibold text-[#64748B] mr-1 ${pathName === '/' ? 'text-white bg-[#244D3F] ' : ''} `}><RiHome2Line />
             Home</Link></li>
         <li><Link href='/timeline' className={`font-semibold text-[#64748B] mr-1 ${pathName === '/timeline' ? 'text-white bg-[#244D3F] ' : ''} `}><RiTimeLine /> Timeline</Link></li>
         <li><Link href='/stats' className={`font-semibold text-[#64748B] ${pathName === '/stats' ? 'text-white bg-[#244D3F] ' : ''} `}><TfiStatsUp /> Stats</Link></li>
