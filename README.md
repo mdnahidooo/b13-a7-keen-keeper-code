@@ -8,13 +8,13 @@ Built with a clean UI inspired by Figma design, KeenKeeper focuses on improving 
 
 ## 🚀 Technologies Used
 
-- React.js / Next.js  
-- React Router DOM / Next.js App Router  
+- Next.js 
+- Next.js App Router  
 - Tailwind CSS  
-- DaisyUI (or any UI library used)  
+- DaisyUI   
 - Recharts (for analytics charts)  
 - React Toastify (for notifications)  
-- JSON (for mock friend data)  
+- JSON (for fake friend data)  
 
 ---
 
@@ -34,7 +34,7 @@ Built with a clean UI inspired by Figma design, KeenKeeper focuses on improving 
 
 ### 📜 Timeline & Analytics
 - Timeline page to track all interactions  
-- Filter timeline by Call / Text / Video  
+- Filter timeline by Call / Messages / Video(Meet)  
 - Friendship analytics using Pie Chart (Recharts)  
 - Visual representation of communication habits  
 
@@ -45,7 +45,7 @@ Built with a clean UI inspired by Figma design, KeenKeeper focuses on improving 
 - 🧭 Navbar (Logo + Active Links with Icons)  
 - 🎯 Home Page Banner (Stats + CTA Button)  
 - 👫 Friends Grid Section  
-- 👤 Friend Details Page (2-column layout)  
+- 👤 Friend Details Page  
 - 📜 Timeline Page (Interaction history)  
 - 📊 Stats Page (Friendship Analytics)  
 - 🦶 Footer Section  
@@ -74,8 +74,8 @@ KeenKeeper is fully responsive and optimized for:
 
 ## ⭐ Optional Features
 
-- Sort timeline (Newest / Oldest)  
-- Search timeline by name or interaction type  
+- Sort timeline (Calls / Messages / Meets)  
+- Search timeline by name or interaction type (Future work)
 - Enhanced UI animations for better UX  
 
 ---
