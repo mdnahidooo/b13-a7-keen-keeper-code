@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 👥 KeenKeeper
 
-## Getting Started
+**KeenKeeper** is a modern friendship management web application designed to help users stay connected and maintain meaningful relationships. It allows users to track interactions, manage friends, view timelines of communication, and analyze friendship activity through visual insights.
 
-First, run the development server:
+Built with a clean UI inspired by Figma design, KeenKeeper focuses on improving real-life social connections through smart reminders and interaction tracking.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Technologies Used
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- React.js / Next.js  
+- React Router DOM / Next.js App Router  
+- Tailwind CSS  
+- DaisyUI (or any UI library used)  
+- Recharts (for analytics charts)  
+- React Toastify (for notifications)  
+- JSON (for mock friend data)  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## ✨ Key Features
 
-To learn more about Next.js, take a look at the following resources:
+### 👫 Friend Management System
+- Display friends from structured JSON data  
+- Beautiful 4-column responsive friend cards  
+- Clickable cards to view detailed friend profiles  
+- Status-based UI (overdue / almost due / on-track)  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 👤 Friend Interaction Details
+- Dedicated friend detail page with full profile view  
+- Quick actions: Call, Text, Video  
+- Automatic timeline entry creation on interaction  
+- Toast notifications for every interaction  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 📜 Timeline & Analytics
+- Timeline page to track all interactions  
+- Filter timeline by Call / Text / Video  
+- Friendship analytics using Pie Chart (Recharts)  
+- Visual representation of communication habits  
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🧩 Main Pages & Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- 🧭 Navbar (Logo + Active Links with Icons)  
+- 🎯 Home Page Banner (Stats + CTA Button)  
+- 👫 Friends Grid Section  
+- 👤 Friend Details Page (2-column layout)  
+- 📜 Timeline Page (Interaction history)  
+- 📊 Stats Page (Friendship Analytics)  
+- 🦶 Footer Section  
+- ⚠️ 404 Page for invalid routes  
+
+---
+
+## 📱 Responsive Design
+
+KeenKeeper is fully responsive and optimized for:
+
+- 💻 Desktop  
+- 📱 Mobile  
+- 📟 Tablet  
+
+---
+
+## ⚙️ Additional Functionalities
+
+- Loading animation while fetching data  
+- Toast notifications for all interactions  
+- Persistent navigation without reload errors  
+- Proper routing support after deployment  
+
+---
+
+## ⭐ Optional Features
+
+- Sort timeline (Newest / Oldest)  
+- Search timeline by name or interaction type  
+- Enhanced UI animations for better UX  
+
+---
+
+## 📌 Project Goal
+
+The goal of **KeenKeeper** is to encourage users to maintain strong relationships by tracking communication habits and providing gentle reminders to stay connected with friends.
+
+---
+
+## 📬 Submission
+
+- 🌐 **Live Link:** https://your-live-link-here.com  
+- 💻 **GitHub Repository:** https://github.com/your-username/keenkeeper  
