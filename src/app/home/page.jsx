@@ -4,6 +4,11 @@ import React from 'react';
 import FriendCard from '@/components/Home/FriendCard';
 import Link from 'next/link';
 
+export const metadata = {
+    title: "KeenKeeper | Home",
+    description: "Manage and nurture your meaningful relationships easily with KeenKeeper.",
+};
+
 const HomePage = async () => {
 
     const res = await fetch("http://localhost:3000/friends.json");

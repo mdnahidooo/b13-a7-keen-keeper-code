@@ -8,7 +8,7 @@ const HeroSection = async () => {
 
     return (
         <div>
-            <div className="flex flex-col items-center text-center justify-center mt-20">
+            <div className="flex flex-col items-center text-center justify-center pt-20">
                 <div className="space-y-4">
                     <h2 className="text-5xl font-extrabold text-gray-800">
                         Friends to keep close in your life

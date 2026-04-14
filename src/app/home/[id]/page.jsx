@@ -1,10 +1,34 @@
+import CallToggleButton from '@/components/AllToggleButton/CallToggleButton';
+import MeetToggleButton from '@/components/AllToggleButton/MeetToggleButton';
+import MessageToggleButton from '@/components/AllToggleButton/MessageToggleButton';
 import Image from 'next/image';
 import React from 'react';
-import { PiArchiveBold, PiPhoneCallBold } from 'react-icons/pi';
-import { RiDeleteBinLine, RiMessage2Line, RiNotificationSnoozeLine } from 'react-icons/ri';
-import { TbBrandZoom } from 'react-icons/tb';
+import { PiArchiveBold } from 'react-icons/pi';
+import { RiDeleteBinLine, RiNotificationSnoozeLine } from 'react-icons/ri';
 
 
+export async function generateMetadata({ params }) {
+    const res = await fetch("http://localhost:3000/friends.json");
+    const friends = await res.json();
+    // console.log(friends, 'from friend details card');
+
+    const { id } = await params;
+    // console.log(id, 'from params');
+
+    const friend = friends.find((friend) => friend.id == id);
+    console.log(friend);
+
+    if (!friend) {
+        return {
+            title: `Not found - KeenKeeper`,
+        };
+    }
+
+    return {
+        title: `${friend.name} - KeenKeeper`,
+        description: friend.bio,
+    };
+}
 
 const FriendDetailPage = async ({ params }) => {
 
@@ -156,10 +180,10 @@ const FriendDetailPage = async ({ params }) => {
                     <div className="bg-white shadow-md rounded-xl p-6 hover:shadow-lg transition">
                         <h2 className="font-semibold mb-4">Quick Check-In</h2>
 
-                        <div className="flex flex-wrap gap-4">
-                            <button className="btn font-bold flex-1 flex-col py-10"> <h2 className='text-3xl'><PiPhoneCallBold /></h2> Call</button>
-                            <button className="btn font-bold flex-1 flex-col py-10"> <h2 className='text-3xl'><RiMessage2Line /></h2> Message</button>
-                            <button className="btn font-bold flex-1 flex-col py-10"> <h2 className='text-3xl'><TbBrandZoom /></h2> Meet</button>
+                        <div className="grid grid-cols-3 gap-4">
+                            <CallToggleButton friend={friend}></CallToggleButton>
+                            <MessageToggleButton friend={friend}></MessageToggleButton>
+                            <MeetToggleButton friend={friend}></MeetToggleButton>
 
                         </div>
                     </div>
