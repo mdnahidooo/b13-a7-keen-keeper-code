@@ -1,11 +1,27 @@
 import React from "react";
 
-const DashboardCards = () => {
+const DashboardCards = ({friends}) => {
+    const totalFriends = friends.length;
+
+    const onTrack = friends.filter(
+        (f) => f.status === "On-Track"
+    ).length;
+
+    const needAttention = friends.filter(
+        (f) => f.status === "Overdue" || f.status === "Almost Due"
+    ).length;
+
+    // interactions in last 30 days
+    const interactionsThisMonth = friends.filter(
+        (f) => f.days_since_contact <= 30
+    ).length;
+
+    // ✅ CARD DATA
     const cards = [
-        { title: "Total Friends", value: 10 },
-        { title: "On Track", value: 4 },
-        { title: "Need Attention", value: 2 },
-        { title: "Interactions This Month", value: 1 },
+        { title: "Total Friends", value: totalFriends },
+        { title: "On Track", value: onTrack },
+        { title: "Need Attention", value: needAttention },
+        { title: "Interactions This Month", value: interactionsThisMonth },
     ];
 
     return (

@@ -18,14 +18,14 @@ const HomePage = async () => {
                 <HeroSection></HeroSection>
 
                 {/* DASHBOARD */}
-                <DashboardCards />
+                <DashboardCards friends={friends} />
 
                 <div className='mb-20'>
                     <h2 className='text-2xl font-bold mb-4'>Your Friends</h2>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {
-                            friends.map((friend) => <Link key={friend.id} href={`/home/${friend.id}`}><FriendCard  friend={friend}></FriendCard></Link>)
+                            friends.map((friend) => <Link key={friend.id} href={`/home/${friend.id}`}><FriendCard friend={friend}></FriendCard></Link>)
                         }
                     </div>
                 </div>
