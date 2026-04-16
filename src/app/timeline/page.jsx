@@ -109,7 +109,7 @@ const TimeLinePage = () => {
 
                                                 {/* current time use */}
                                                 <div className="text-xs font-semibold opacity-60 flex items-center gap-1">
-                                                    📅 {
+                                                     {
                                                         item.interaction_date
                                                             ? new Date(item.interaction_date).toLocaleDateString("en-GB", {
                                                                 timeZone: "Asia/Dhaka",

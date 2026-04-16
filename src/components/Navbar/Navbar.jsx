@@ -34,7 +34,7 @@ const Navbar = () => {
                     </div>
                     <Link href="/home" className="btn btn-ghost text-xl font-bold flex items-center gap-0">
                         <span className="text-[#1F2937]">Keen</span>
-                        <span className="text-[#244D3F]">Keeper</span>
+                        <span className="text-[#0f7251]">Keeper</span>
                     </Link>
                 </div>
                 <div className="navbar-end hidden lg:flex">
