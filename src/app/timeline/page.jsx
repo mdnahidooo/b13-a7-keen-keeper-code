@@ -19,30 +19,30 @@ const TimeLinePage = () => {
         ...meets.map((item) => ({ ...item, type: "meet" })),
     ];
 
-    // ✅ SORT (LATEST FIRST)
+    // shorting  (latest data first) --> 
     const sortedData = [...allData].sort(
         (a, b) =>
             new Date(b.interaction_date || 0) -
             new Date(a.interaction_date || 0)
     );
 
-    // FILTER LOGIC
+    // filter er logic
     const filteredData =
         filter === "all"
             ? sortedData
             : sortedData.filter((item) => item.type === filter);
 
-    // EMPTY STATE
+    // empty state
     const isEmpty = allData.length === 0;
 
     return (
         <div className="bg-gray-50">
             <div className="w-10/12 mx-auto my-10">
 
-                {/* TITLE */}
+                
                 <h2 className="text-3xl font-bold mb-5">Timeline</h2>
 
-                {/* DROPDOWN */}
+                {/* for dropdown */}
                 <div className="mb-6 flex justify-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-sm w-60">
@@ -66,7 +66,7 @@ const TimeLinePage = () => {
                     </div>
                 </div>
 
-                {/* EMPTY */}
+                {/* empty */}
                 {isEmpty ? (
                     <div className="bg-white shadow-md rounded-xl p-10 text-center">
                         <h2 className="text-2xl font-bold text-gray-700">
@@ -91,14 +91,14 @@ const TimeLinePage = () => {
                                     <ul className="list bg-base-100 rounded-box shadow-md">
                                         <li className="list-row flex items-center gap-4 p-4">
 
-                                            {/* ICON */}
+                                            {/* icon*/}
                                             <h2 className="text-3xl">
                                                 {item.type === "call" && <PiPhoneCallBold />}
                                                 {item.type === "message" && <RiMessage2Line />}
                                                 {item.type === "meet" && <TbBrandZoom />}
                                             </h2>
 
-                                            {/* CONTENT */}
+                                            
                                             <div className="text-[#64748B]">
                                                 <div>
                                                     <span className="text-lg font-bold text-black capitalize">
@@ -107,7 +107,7 @@ const TimeLinePage = () => {
                                                     with {item.name}
                                                 </div>
 
-                                                {/* ✅ SAFE + BD DATE */}
+                                                {/* current time use */}
                                                 <div className="text-xs font-semibold opacity-60 flex items-center gap-1">
                                                     📅 {
                                                         item.interaction_date
