@@ -10,8 +10,11 @@ const MessageToggleButton = ({ friend }) => {
     // console.log(messages, setMessages, "something from context");
 
     const handleMessageToggle = () => {
-        console.log("handle call toggle button");
-        setMessages([...messages, friend])
+        const newMessage = {
+            ...friend,
+            interaction_date: new Date().toISOString(),
+        };
+        setMessages([...messages, newMessage]);
 
         toast.success(`💬 Message sent to ${friend.name}!`, {
             position: "top-center",

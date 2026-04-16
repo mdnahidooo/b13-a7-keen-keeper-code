@@ -6,26 +6,31 @@ import { PiPhoneCallBold } from "react-icons/pi";
 import { RiArrowDropDownLine, RiMessage2Line } from "react-icons/ri";
 import { TbBrandZoom } from "react-icons/tb";
 
-
-
 const TimeLinePage = () => {
     const { calls, messages, meets } = useContext(FriendContext);
 
-    // FILTER STATE
+    // for filter
     const [filter, setFilter] = useState("all");
 
-    // COMBINED DATA
+    // combined data here
     const allData = [
         ...calls.map((item) => ({ ...item, type: "call" })),
         ...messages.map((item) => ({ ...item, type: "message" })),
         ...meets.map((item) => ({ ...item, type: "meet" })),
     ];
 
+    // ✅ SORT (LATEST FIRST)
+    const sortedData = [...allData].sort(
+        (a, b) =>
+            new Date(b.interaction_date || 0) -
+            new Date(a.interaction_date || 0)
+    );
+
     // FILTER LOGIC
     const filteredData =
         filter === "all"
-            ? allData
-            : allData.filter((item) => item.type === filter);
+            ? sortedData
+            : sortedData.filter((item) => item.type === filter);
 
     // EMPTY STATE
     const isEmpty = allData.length === 0;
@@ -37,9 +42,8 @@ const TimeLinePage = () => {
                 {/* TITLE */}
                 <h2 className="text-3xl font-bold mb-5">Timeline</h2>
 
-                {/* ✅ DROPDOWN FILTER */}
+                {/* DROPDOWN */}
                 <div className="mb-6 flex justify-start">
-
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-sm w-60">
                             <div className="flex items-center justify-between w-full">
@@ -54,24 +58,15 @@ const TimeLinePage = () => {
                             tabIndex={0}
                             className="dropdown-content menu bg-base-100 rounded-box w-60 p-2 shadow"
                         >
-                            <li>
-                                <button onClick={() => setFilter("all")}>All</button>
-                            </li>
-                            <li>
-                                <button onClick={() => setFilter("call")}>Calls</button>
-                            </li>
-                            <li>
-                                <button onClick={() => setFilter("message")}>Messages</button>
-                            </li>
-                            <li>
-                                <button onClick={() => setFilter("meet")}>Meets</button>
-                            </li>
+                            <li><button onClick={() => setFilter("all")}>All</button></li>
+                            <li><button onClick={() => setFilter("call")}>Calls</button></li>
+                            <li><button onClick={() => setFilter("message")}>Messages</button></li>
+                            <li><button onClick={() => setFilter("meet")}>Meets</button></li>
                         </ul>
                     </div>
-
                 </div>
 
-                {/* EMPTY STATE */}
+                {/* EMPTY */}
                 {isEmpty ? (
                     <div className="bg-white shadow-md rounded-xl p-10 text-center">
                         <h2 className="text-2xl font-bold text-gray-700">
@@ -82,7 +77,6 @@ const TimeLinePage = () => {
                         </p>
                     </div>
                 ) : (
-                    /* TIMELINE LIST */
                     <div>
                         {filteredData.length === 0 ? (
                             <div className="bg-white shadow-md rounded-xl p-10 text-center">
@@ -113,8 +107,18 @@ const TimeLinePage = () => {
                                                     with {item.name}
                                                 </div>
 
-                                                <div className="text-xs uppercase font-semibold opacity-60">
-                                                    {item.next_due_date}
+                                                {/* ✅ SAFE + BD DATE */}
+                                                <div className="text-xs font-semibold opacity-60 flex items-center gap-1">
+                                                    📅 {
+                                                        item.interaction_date
+                                                            ? new Date(item.interaction_date).toLocaleDateString("en-GB", {
+                                                                timeZone: "Asia/Dhaka",
+                                                                year: "numeric",
+                                                                month: "long",
+                                                                day: "numeric",
+                                                            })
+                                                            : "No date"
+                                                    }
                                                 </div>
                                             </div>
 
@@ -126,7 +130,6 @@ const TimeLinePage = () => {
                         )}
                     </div>
                 )}
-
             </div>
         </div>
     );

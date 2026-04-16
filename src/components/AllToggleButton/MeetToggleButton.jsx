@@ -10,8 +10,11 @@ const MeetToggleButton = ({ friend }) => {
     // console.log(meets, setMeets, "something from context");
 
     const handleMeetToggle = () => {
-        console.log("handle call toggle button");
-        setMeets([...meets, friend])
+        const newMeet = {
+            ...friend,
+            interaction_date: new Date().toISOString(),
+        };
+        setMeets([...meets, newMeet]);
 
         toast.success(`🎥 ${friend.name} get a Zoom meeting invite!`, {
             position: "top-center",

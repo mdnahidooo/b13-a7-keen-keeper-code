@@ -7,11 +7,25 @@ import { toast } from 'react-toastify';
 const CallToggleButton = ({ friend }) => {
 
     const { calls, setCalls } = useContext(FriendContext);
-    console.log(calls, setCalls, "something from context");
+    // console.log(calls, setCalls, "something from context");
     
+    // const handleCallToggle = () => {
+    //     console.log("handle call toggle button");
+    //     setCalls([...calls, friend])
+
+    //     toast.success(`📞 Call with ${friend.name} recorded!`, {
+    //         position: "top-center",
+    //     });
+    // };
+
     const handleCallToggle = () => {
-        console.log("handle call toggle button");
-        setCalls([...calls, friend])
+
+        const newCall = {
+            ...friend,
+            interaction_date: new Date().toISOString(),
+        };
+
+        setCalls([...calls, newCall]);
 
         toast.success(`📞 Call with ${friend.name} recorded!`, {
             position: "top-center",
